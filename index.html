@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reward Progress | Start Earning Today</title>
+  <meta name="description" content="Follow our quick start guide to download the app, test games, and start earning rewards fast." />
+  <meta name="author" content="Lovable" />
+  <link rel="canonical" href="/" />
+
+  <meta property="og:title" content="Reward Progress | Start Earning Today" />
+  <meta property="og:description" content="Follow our quick start guide to download the app, test games, and start earning rewards fast." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lovable_dev" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      background: radial-gradient(1000px 600px at 50% -200px, hsl(280, 100%, 70%) 0%, transparent 60%), 
+                  linear-gradient(to bottom, hsl(240, 10%, 3.9%) 0%, hsl(280, 20%, 10%) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem;
+      color: hsl(0, 0%, 98%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 28rem;
+    }
+
+    .card {
+      border-radius: 1.5rem;
+      border: 1px solid hsl(240, 3.7%, 15.9%, 0.4);
+      background: transparent;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 11rem;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      padding-top: 0;
+    }
+
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .tracking-wide {
+      letter-spacing: 0.025em;
+    }
+
+    .text-muted {
+      color: hsl(240, 5%, 64.9%);
+    }
+
+    .progress-bar-container {
+      margin-top: 0.75rem;
+      height: 0.75rem;
+      width: 100%;
+      border-radius: 9999px;
+      background: hsl(240, 3.7%, 15.9%);
+      position: relative;
+      overflow: visible;
+    }
+
+    .progress-bar {
+      height: 0.75rem;
+      border-radius: 9999px;
+      background: linear-gradient(to right, hsl(174, 62%, 47%), hsl(174, 70%, 62%));
+      box-shadow: 0 0 20px rgba(101, 219, 219, 0.6);
+      transition: width 0.3s ease;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      line-height: 1.3;
+      color: hsl(0, 0%, 98%);
+    }
+
+    @media (min-width: 640px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+    }
+
+    .quick-start-section {
+      border-radius: 1rem;
+      background: hsl(240, 3.7%, 15.9%);
+      border: 1px solid hsl(240, 3.7%, 15.9%, 0.3);
+      padding: 1.25rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .checklist li:first-child {
+      margin-top: 0;
+    }
+
+    .check-icon {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      color: hsl(0, 84%, 60%);
+    }
+
+    .checklist-text {
+      color: white;
+    }
+
+    .checklist-subtext {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .button-container {
+      padding: 0 0.25rem;
+    }
+
+    .cta-button {
+      width: 100%;
+      background: linear-gradient(to right, hsl(174, 62%, 47%), hsl(174, 70%, 62%));
+      color: black;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(101, 219, 219, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 0 40px rgba(101, 219, 219, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      padding-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: hsl(240, 5%, 64.9%);
+    }
+
+    .shield-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <article class="card">
+      <header class="card-header">
+        <img
+          src="https://echo-this-feeling-64960.lovable.app/logo-hero.png"
+          alt="Playful app logo with golden coins on purple background"
+          loading="lazy"
+          class="logo-img"
+        />
+      </header>
+
+      <div class="card-content space-y-6">
+        <section aria-labelledby="reward-progress">
+          <p id="reward-progress" class="text-center text-sm font-semibold tracking-wide text-muted">
+            Reward Progress
+          </p>
+          <div class="progress-bar-container" aria-hidden="true">
+            <div class="progress-bar" style="width: 28%"></div>
+          </div>
+        </section>
+
+        <h1 class="text-center">
+          Follow the instructions to start earning today!
+        </h1>
+
+        <section aria-labelledby="quick-start" class="quick-start-section">
+          <div class="section-header">
+            <h2 id="quick-start">Quick Start Guide →</h2>
+          </div>
+
+          <ul class="checklist">
+            <li>
+              <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <p class="font-semibold checklist-text">Download the Playful app</p>
+                <p class="checklist-subtext">Click the button below</p>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <p class="font-semibold checklist-text">Earn More by Testing Multiple Games</p>
+                <p class="checklist-subtext">Make over $100/day</p>
+              </div>
+            </li>
+            <li>
+              <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <p class="font-semibold checklist-text">Pro tip: Make in‑app purchases to earn faster</p>
+                <p class="checklist-subtext">They reimburse eligible spends</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="button-container">
+          <a href="#" id="ctaButton" class="cta-button" target="_blank" rel="noopener noreferrer nofollow sponsored" aria-label="Start earning now via affiliate link">
+            START EARNING NOW
+          </a>
+        </div>
+
+        <footer class="footer">
+          <p class="footer-text">
+            <svg class="shield-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            Secure & Confidential
+          </p>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Start Earning Rewards",
+    "description": "Follow these steps to download the app, test multiple games, and start earning rewards fast.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Download the app",
+        "text": "Click the Start Earning button to download the TesterUp app."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Test multiple games",
+        "text": "Open the app and try several games to increase your rewards."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Optional purchases",
+        "text": "Make in‑app purchases to accelerate progress (costs are reimbursed)."
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    // Dynamic URL parameter merging
+    function buildCtaUrl() {
+      const baseUrl = "https://affrkr.com/?bbz=bXahuVI7wxvs04HBvLdwvNC/sOXuQ0JEvQJDRoz7h5U=&s1=";
+      
+      // Get current page URL parameters
+      const currentParams = new URLSearchParams(window.location.search);
+      
+      // Parse the base URL
+      const url = new URL(baseUrl);
+      const urlParams = new URLSearchParams(url.search);
+      
+      // Override s1: prioritize mysubid, then s1 from page URL
+      const s1Value = currentParams.get("mysubid") || currentParams.get("s1");
+      if (s1Value) {
+        urlParams.set("s1", s1Value);
+      }
+      
+      // Override bbz if present in page URL
+      const bbzValue = currentParams.get("bbz");
+      if (bbzValue) {
+        urlParams.set("bbz", bbzValue);
+      }
+      
+      return url.origin + url.pathname + "?" + urlParams.toString();
+    }
+
+    // Set the CTA button URL on page load
+    document.getElementById("ctaButton").href = buildCtaUrl();
+  </script>
+</body>
+</html>
